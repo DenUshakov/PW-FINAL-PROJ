@@ -12,16 +12,20 @@ npm init playwright@latest
 
 ## Usage
 
+Runs the end-to-end tests.
+
 ```
-# Runs the end-to-end tests.
 npx playwright test
+```
 
-# or
+or
+
+```
 npm run test  
-   
+``` 
 
-#To open last HTML report run:
+To open last HTML report run:
 
-  npx playwright show-report
-    
+```
+npx playwright show-report    
 ```
