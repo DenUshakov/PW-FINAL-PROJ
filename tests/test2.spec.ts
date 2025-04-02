@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('test', async ({ page }) => {
-  await page.goto('');
+  await page.goto(process.env.WEB_URL as string);
   await page.getByText('Combination Pliers').click();
   await page.locator('[data-test="product-name"]').click();
   await expect(page.locator('[data-test="product-name"]')).toContainText('Combination Pliers');

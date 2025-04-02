@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('test', async ({ page }) => {
-  await page.goto('');
+  await page.goto(process.env.WEB_URL as string);
 
   //Click on the product "Slip Joint Pliers".
   await page.locator('[data-test="product-name"]').getByText('Slip Joint Pliers').click();
@@ -22,7 +22,7 @@ test('test', async ({ page }) => {
   //Click on the cart icon in the navigation.
   await page.locator('[data-test="nav-cart"]').click();
   //Verify URL is https://practicesoftwaretesting.com/checkout.
-  await expect(page).toHaveURL('/checkout');
+  await expect(page).toHaveURL(process.env.WEB_URL + '/checkout');
 //   Verify the number of products in the cart table equals 1.
   await expect(page.locator('[data-test="product-quantity"]')).toHaveValue('1');
   //Verify product title in the cart is "Slip Joint Pliers".
