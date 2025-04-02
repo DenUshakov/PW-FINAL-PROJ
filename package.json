@@ -1,0 +1,24 @@
+{
+  "name": "pw-final-proj",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DenUshakov/PW-FINAL-PROJ.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DenUshakov/PW-FINAL-PROJ/issues"
+  },
+  "homepage": "https://github.com/DenUshakov/PW-FINAL-PROJ#readme",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.13.16"
+  }
+}
