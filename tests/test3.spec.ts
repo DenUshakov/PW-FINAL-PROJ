@@ -22,7 +22,7 @@ test('test', async ({ page }) => {
   //Click on the cart icon in the navigation.
   await page.locator('[data-test="nav-cart"]').click();
   //Verify URL is https://practicesoftwaretesting.com/checkout.
-  await expect(page).toHaveURL(process.env.WEB_URL + '/checkout');
+  await expect(page).toHaveURL('/checkout');
 //   Verify the number of products in the cart table equals 1.
   await expect(page.locator('[data-test="product-quantity"]')).toHaveValue('1');
   //Verify product title in the cart is "Slip Joint Pliers".
