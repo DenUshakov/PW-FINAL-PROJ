@@ -11,8 +11,13 @@ enum ProductCategory {
   test('testSortByCategory', async ({ page }) => {
     const homePage = new HomePage(page);
     await page.goto('/');
+
+    const waitPromise = page.waitForResponse(request => 
+      request.url().includes('by_category=') && request.status() === 200, {timeout: 5000});
+  
     await page.getByText(ProductCategory.Sander).check();
-    await page.waitForTimeout(1000);
+    await waitPromise;
+
     const products = await homePage.getProductNames();
     
     const allContainCategory = products.every(productName =>

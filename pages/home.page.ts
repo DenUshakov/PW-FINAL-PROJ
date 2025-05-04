@@ -3,8 +3,6 @@ import { Locator, Page } from "@playwright/test";
 export class HomePage {
 page: Page;
 sortLocator: Locator;
-sortASClocator: Locator;
-sortDESCLocator: Locator;
 productNameLocator: Locator;
 productPriсeLocator: Locator;
 
@@ -21,7 +19,10 @@ async sort(label: string): Promise<void> {
   }
 
 async waitForProducts(): Promise<void> {
-    (await this.page.waitForSelector('[data-test="product-name"]')).isVisible;
+  const isVisible = await this.page.isVisible('[data-test="product-name"]');
+  if (!isVisible) {
+      throw new Error('Product is not visible');
+  }
   }
 
 async getProductNames(): Promise<string[]> {
