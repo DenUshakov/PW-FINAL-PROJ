@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { HomePage } from '../pages/home.page';
-require('dotenv').config();
+
 
 const sortOption = [
     {label: 'price,asc', ascending: true}, 

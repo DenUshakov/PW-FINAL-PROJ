@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/login.page';
-require('dotenv').config();
+
 
 test('test', async ({ page }) => {
   const loginPage = new LoginPage(page);
