@@ -23,6 +23,11 @@ or
 ```
 npm run test  
 ``` 
+or
+
+```
+npm t
+``` 
 
 To open last HTML report run:
 
